@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Parse an AWS S3 bucket name and object key from an S3 URI in the format 's3://bucket-name/path/to/object'. Extract both the bucket name and the full object key.",
+    "format": "regex",
+    "solution_criteria": "The regex should correctly capture the bucket name and object key from valid S3 URIs. It should handle bucket names with hyphens and numbers, and object keys with multiple path segments."
+  },
+  {
+    "task": "Write a Python function that takes an AWS CloudFormation template as a dictionary and returns a list of all logical resource IDs that have a resource type starting with 'AWS::Lambda'.",
+    "format": "python",
+    "solution_criteria": "The function should iterate through the Resources section of the template, identify all Lambda-related resources, and return their logical IDs as a list. It should handle cases where the Resources section is missing or empty."
+  },
+  {
+    "task": "Create a JSON object representing an AWS IAM policy that grants read-only access to a specific S3 bucket named 'my-data-bucket'. The policy should allow GetObject and ListBucket actions only.",
+    "format": "json",
+    "solution_criteria": "The JSON should be a valid IAM policy document with proper Version, Statement structure, Effect set to Allow, Actions limited to s3:GetObject and s3:ListBucket, and Resource ARNs specific to the bucket and its objects."
+  }
+]
