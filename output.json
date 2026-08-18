@@ -1,0 +1,64 @@
+[
+  {
+    "output": "The user wants a one-day meal plan for a marathon athlete with the following details:\n- Height: 175 cm\n- Weight: 70 kg\n- Goal: Marathon performance optimization\n- Dietary restrictions: Lactose intolerant\n\nGuidelines:\n1. Include accurate daily calorie amount\n2. Show protein, fat, and carb amounts\n3. Specify when to eat each meal\n4. Use only foods that fit restrictions (no lactose - so no milk, cheese, butter, cream, etc. - need to use lactose-free alternatives or naturally lactose-free foods)\n5. List all portion sizes in grams\n6. Keep budget-friendly (not explicitly mentioned, but I'll keep it reasonable)\n\nLet me calculate the daily calorie needs:\n- BMR (Mifflin-St Jeor): For a male (assuming male, but I'll keep it gender-neutral... actually, let me just calculate for the given stats). Actually, gender isn't specified. Let me use a reasonable estimate.\n- BMR (Mifflin-St Jeor for male): 10 \u00d7 70 + 6.25 \u00d7 175 - 5 \u00d7 age - 5. I'll assume age ~30. = 700 + 1093.75 - 150 - 5 = 1638.75 kcal\n- BMR (Mifflin-St Jeor for female): 10 \u00d7 70 + 6.25 \u00d7 175 - 5 \u00d7 30 - 161 = 700 + 1093.75 - 150 - 161 = 1482.75 kcal\n- For marathon training, activity multiplier is high: 1.7-2.0+\n- Let's say TDEE: approximately 1638 \u00d7 1.8 \u2248 2950 kcal (male) or 1483 \u00d7 1.8 \u2248 2670 kcal (female)\n- For marathon performance optimization, they'd need higher carbs. Let's target around 3000-3500 kcal for a male, or ~2800 for a female. Since gender isn't specified, I'll aim for approximately 3,200 kcal which is a solid target for a 70kg marathoner in training.\n\nActually, let me target around 3,000-3,200 kcal. Let me go with ~3,200 kcal.\n\nMacronutrient split for marathon performance:\n- Carbs: 60-70% (for endurance) \u2192 ~550-560g carbs\n- Protein: 15-20% \u2192 ~120-160g protein\n- Fat: 20-30% \u2192 ~70-100g fat\n\nLet me aim for:\n- Calories: ~3,200 kcal\n- Carbs: ~560g (70%)\n- Protein: ~130g (16%)\n- Fat: ~75g (14%)\n\nWait, let me recalculate:\n- 560g carbs \u00d7 4 = 2240 kcal\n- 130g protein \u00d7 4 = 520 kcal\n- 75g fat \u00d7 9 = 675 kcal\n- Total: 3435 kcal\n\nLet me adjust:\n- Carbs: 530g \u2192 2120 kcal\n- Protein: 130g \u2192 520 kcal\n- Fat: 80g \u2192 720 kcal\n- Total: 3360 kcal\n\nLet me aim for ~3,200 kcal:\n- Carbs: 500g \u2192 2000 kcal\n- Protein: 125g \u2192 500 kcal\n- Fat: 80g \u2192 720 kcal\n- Total: 3220 kcal \u2248 3,200 kcal\n\nThat works well. Let me plan meals around this.\n\nLactose intolerant: Avoid milk, cheese, butter, cream, ice cream. Can use:\n- Lactose-free milk (but let me use alternatives for simplicity)\n- Oat milk, soy milk, almond milk\n- Tofu\n- Eggs\n- Chicken, fish, lean beef\n- Rice, oats, bread, pasta\n- Fruits, vegetables\n- Nuts, seeds\n- Olive oil",
+    "test_case": {
+      "prompt_inputs": {
+        "height": 175,
+        "weight": 70,
+        "goal": "Marathon performance optimization",
+        "restrictions": "Lactose intolerant"
+      },
+      "solution_criteria": [
+        "Provides a single-day meal plan consisting of 3 main meals and optional snacks",
+        "All food items are lactose-free or explicitly labeled as suitable for lactose intolerance",
+        "Meals emphasize high-carbohydrate sources appropriate for marathon fueling",
+        "Output is concise and compact, avoiding lengthy nutritional breakdowns or excessive detail"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a lactose-intolerant runner needing high-carb fueling for a marathon, focusing on concise meal structure"
+    },
+    "score": 1,
+    "reasoning": "The solution is incomplete because it stops at the planning and calculation phase without generating the actual meal plan. It fails to meet the primary mandatory requirement of providing a single-day meal plan with specific food items. Additionally, it violates the conciseness criterion by including verbose internal monologue and calculations rather than a direct, compact output."
+  },
+  {
+    "output": "The user wants a one-day meal plan for a powerlifter who is bulking. Let me work through this carefully.\n\nAthlete info:\n- Height: 180 cm\n- Weight: 95 kg\n- Goal: Bulking (Powerlifting)\n- Dietary restriction: Gluten-free\n\nFor a powerlifter bulking at 95 kg, I need to calculate appropriate calorie needs.\n\nBMR calculation (Mifflin-St Jeor for males, assuming male given powerlifting context):\nBMR = 10 \u00d7 95 + 6.25 \u00d7 180 - 5 \u00d7 30 - 5 (assuming age ~30)\n= 950 + 1125 - 150 - 5\n= 1920 kcal\n\nFor a powerlifter training 4-5 days/week with moderate to high intensity, activity multiplier ~1.7-1.9\nTDEE = 1920 \u00d7 1.8 \u2248 3456 kcal\n\nFor bulking, add a surplus of ~300-500 kcal above maintenance:\nTarget: ~3800-4000 kcal\n\nLet me go with approximately 4000 kcal for a solid bulking target.\n\nMacronutrient split for powerlifting bulking:\n- Protein: ~1.6-2.2 g/kg = ~150-210g (let's say ~180g = 720 kcal)\n- Fat: ~25-30% of calories = ~275-330 kcal... let me recalculate\n- Carbs: remaining\n\nLet me set:\n- Protein: 200g = 800 kcal (20%)\n- Fat: 130g = 1170 kcal (29%)\n- Carbs: 430g = 1720 kcal (43%)\n- Total: ~3690 kcal\n\nHmm, let me adjust to hit closer to 4000:\n- Protein: 200g = 800 kcal (20%)\n- Fat: 140g = 1260 kcal (32%)\n- Carbs: 470g = 1880 kcal (47%)\n- Total: ~3940 kcal\n\nLet me round to:\n- Calories: ~4000 kcal\n- Protein: 200g (800 kcal)\n- Fat: 140g (1260 kcal)\n- Carbs: 480g (1920 kcal)\nTotal: 3980 kcal \u2248 4000 kcal\n\nNow let me plan meals. All gluten-free. I need to be careful:\n- No wheat, barley, rye\n- Oats must be certified gluten-free\n- Rice, potatoes, quinoa, corn are safe\n- Natural meats, fish, eggs are safe\n- Avocado, nuts (check labels) are safe\n- No breadcrumbs, no bread (unless GF bread)\n- Soy sauce should be tamari (GF)\n\nMeal plan (5-6 meals for an athlete):\n\nMeal 1 - Breakfast (7:00 AM): ~700 kcal\n- Oatmeal (GF certified) 100g = 389 kcal, 69g carbs, 13g protein, 7g fat\n- Whole eggs 3 (150g) = 234 kcal, 21g protein, 15g fat, 1g carb\n- Bananas 1 (120g) = 107 kcal, 27g carbs, 1g protein, 0g fat\n- Honey 20g = 62 kcal, 17g carbs\n- Total: ~792 kcal, 35g protein, 23g fat, 114g carbs\n\nMeal 2 - Lunch (11:30 AM): ~800 kcal\n- Chicken breast (raw weight) 200g = 330 kcal, 62g protein, 7g fat, 0g carbs\n- White rice (dry) 150g = 544 kcal, 118g carbs, 11g protein, 1g fat\n- Olive oil 15g = 135 kcal, 15g fat\n- Vegetables (broccoli)",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180",
+        "weight": "95",
+        "goal": "Bulking (Powerlifting)",
+        "restrictions": "Gluten-free"
+      },
+      "solution_criteria": [
+        "Provides a 1-day meal plan with compact presentation",
+        "All foods are strictly gluten-free",
+        "Includes specific macro targets or high-calorie density suitable for bulking"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a gluten-free powerlifter requiring specific macro ratios for bulking phase, emphasizing compact presentation"
+    },
+    "score": 2,
+    "reasoning": "The solution fails the mandatory requirement of providing a complete 1-day meal plan as it is truncated after the second meal. Additionally, it violates the 'compact, concise' presentation criterion by including detailed calculation logs and internal reasoning instead of just the final output. While the nutritional logic and gluten-free compliance are correct, the incomplete and verbose nature of the response makes it unusable as requested."
+  },
+  {
+    "output": "The user wants a one-day meal plan for an endurance cyclist with specific attributes:\n- Height: 175 cm\n- Weight: 70 kg\n- Goal: Endurance cycling performance\n- Dietary restrictions: Vegan, strict budget\n\nLet me calculate the daily calorie needs:\n- BMR (Basal Metabolic Rate) using Mifflin-St Jeor equation:\n  - For a person (gender not specified, I'll assume male based on context, but let me use a general calculation):\n  - BMR = 10 \u00d7 weight(kg) + 6.25 \u00d7 height(cm) - 5 \u00d7 age - 5 (male) or +161 (female)\n  - Let's assume male, age ~25: BMR = 10(70) + 6.25(175) - 5(25) - 5 = 700 + 1093.75 - 125 - 5 = 1663.75 kcal\n  - Let's assume female, age ~25: BMR = 700 + 1093.75 - 125 + 161 = 2829.75... wait that doesn't seem right.\n  - Actually: BMR (female) = 10(70) + 6.25(175) - 5(25) - 161 = 700 + 1093.75 - 125 - 161 = 1507.75 kcal\n\nLet me just use a general BMR around 1,600-1,700 kcal for a 70kg, 175cm person.\n\n- TDEE (Total Daily Energy Expenditure) for an endurance cyclist:\n  - An endurance cyclist typically trains 2-4+ hours per day\n  - Activity multiplier: 1.7-1.9 (very active)\n  - TDEE = ~1,650 \u00d7 1.8 = ~2,970 kcal\n  - For endurance cycling performance (high volume training), they'd need more fuel\n  - Endurance athletes typically need 4,000-6,000+ kcal depending on training volume\n  - Let's estimate a moderate-to-high training day: about 3,500-4,500 kcal\n  - I'll go with approximately 3,800 kcal as a reasonable estimate for a 70kg endurance cyclist on a training day (not a competition day, but a solid training day)\n\nActually, let me reconsider. For a 70kg person doing endurance cycling:\n- BMR ~1,650 kcal\n- Training: 3 hours of moderate cycling burns ~600-900 kcal\n- Total: ~2,800-3,500 kcal on a normal training day\n- For performance-focused training: 3,500-4,000 kcal\n\nI'll target approximately 3,800 kcal to support endurance performance.\n\nMacronutrient distribution for endurance cycling:\n- Carbs: 65-70% (primary fuel for endurance)\n- Protein: 15-20% (recovery)\n- Fat: 15-20% (sustained energy)\n\nAt 3,800 kcal:\n- Carbs: 70% = 2,660 kcal = 665g\n- Protein: 18% = 684 kcal = 171g\n- Fat: 12% = 456 kcal = 51g\n\nWait, let me recalculate to be more realistic for a vegan diet:\n- Carbs: 65% = 2,470 kcal = 617g\n- Protein: 20% = 760 kcal = 190g\n- Fat: 15% = 570 kcal = 63g\n\nTotal: 617 + 190 + 63 = 870g of macros, 3,800 kcal. That works.\n\nLet me adjust slightly:\n- Carbs: 65% = ~620g\n- Protein: 20% = ~190g\n- Fat: 15% = ~63g\n- Total: ~3,800 kcal\n\nNow",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "175",
+        "weight": "70",
+        "goal": "Endurance cycling performance",
+        "restrictions": "Vegan, strict budget"
+      },
+      "solution_criteria": [
+        "Provides a complete 1-day meal plan (breakfast, lunch, dinner, snacks)",
+        "All ingredients are vegan and low-cost (e.g., oats, beans, rice, seasonal vegetables)",
+        "Plan is concise and fits within a compact format (no unnecessary fluff or lengthy explanations)",
+        "Meals are feasible for a cyclist's energy needs without requiring expensive supplements"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a vegan cyclist on a strict budget, verifying feasibility and conciseness of the 1-day plan"
+    },
+    "score": 1,
+    "reasoning": "The solution completely fails the primary task of providing a meal plan. It only outputs the AI's internal thought process regarding calorie calculations and macronutrient distribution. It does not list any specific foods, meals, or ingredients, thus failing all mandatory criteria related to content and format."
+  }
+]

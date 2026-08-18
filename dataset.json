@@ -1,14 +1,49 @@
 [
   {
-    "task": "Parse an AWS S3 bucket name and key from an S3 URI in the format 's3://bucket-name/path/to/key'",
-    "format": "regex"
+    "prompt_inputs": {
+      "height": 175,
+      "weight": 70,
+      "goal": "Marathon performance optimization",
+      "restrictions": "Lactose intolerant"
+    },
+    "solution_criteria": [
+      "Provides a single-day meal plan consisting of 3 main meals and optional snacks",
+      "All food items are lactose-free or explicitly labeled as suitable for lactose intolerance",
+      "Meals emphasize high-carbohydrate sources appropriate for marathon fueling",
+      "Output is concise and compact, avoiding lengthy nutritional breakdowns or excessive detail"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a lactose-intolerant runner needing high-carb fueling for a marathon, focusing on concise meal structure"
   },
   {
-    "task": "Create a JSON CloudFormation template snippet that defines an IAM role with a trust policy allowing EC2 instances to assume it",
-    "format": "json"
+    "prompt_inputs": {
+      "height": "180",
+      "weight": "95",
+      "goal": "Bulking (Powerlifting)",
+      "restrictions": "Gluten-free"
+    },
+    "solution_criteria": [
+      "Provides a 1-day meal plan with compact presentation",
+      "All foods are strictly gluten-free",
+      "Includes specific macro targets or high-calorie density suitable for bulking"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a gluten-free powerlifter requiring specific macro ratios for bulking phase, emphasizing compact presentation"
   },
   {
-    "task": "Write a Python function that validates an AWS ARN string and returns True if valid, False otherwise",
-    "format": "python"
+    "prompt_inputs": {
+      "height": "175",
+      "weight": "70",
+      "goal": "Endurance cycling performance",
+      "restrictions": "Vegan, strict budget"
+    },
+    "solution_criteria": [
+      "Provides a complete 1-day meal plan (breakfast, lunch, dinner, snacks)",
+      "All ingredients are vegan and low-cost (e.g., oats, beans, rice, seasonal vegetables)",
+      "Plan is concise and fits within a compact format (no unnecessary fluff or lengthy explanations)",
+      "Meals are feasible for a cyclist's energy needs without requiring expensive supplements"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a vegan cyclist on a strict budget, verifying feasibility and conciseness of the 1-day plan"
   }
 ]

@@ -1,0 +1,362 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">1.3 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">0.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a lactose-intolerant runner needing high-carb fueling for a marathon, focusing on concise meal structure</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 70<br><strong>goal:</strong> Marathon performance optimization<br><strong>restrictions:</strong> Lactose intolerant</td>
+                <td class="criteria">• Provides a single-day meal plan consisting of 3 main meals and optional snacks<br>• All food items are lactose-free or explicitly labeled as suitable for lactose intolerance<br>• Meals emphasize high-carbohydrate sources appropriate for marathon fueling<br>• Output is concise and compact, avoiding lengthy nutritional breakdowns or excessive detail</td>
+                <td class="output"><pre>The user wants a one-day meal plan for a marathon athlete with the following details:
+- Height: 175 cm
+- Weight: 70 kg
+- Goal: Marathon performance optimization
+- Dietary restrictions: Lactose intolerant
+
+Guidelines:
+1. Include accurate daily calorie amount
+2. Show protein, fat, and carb amounts
+3. Specify when to eat each meal
+4. Use only foods that fit restrictions (no lactose - so no milk, cheese, butter, cream, etc. - need to use lactose-free alternatives or naturally lactose-free foods)
+5. List all portion sizes in grams
+6. Keep budget-friendly (not explicitly mentioned, but I'll keep it reasonable)
+
+Let me calculate the daily calorie needs:
+- BMR (Mifflin-St Jeor): For a male (assuming male, but I'll keep it gender-neutral... actually, let me just calculate for the given stats). Actually, gender isn't specified. Let me use a reasonable estimate.
+- BMR (Mifflin-St Jeor for male): 10 × 70 + 6.25 × 175 - 5 × age - 5. I'll assume age ~30. = 700 + 1093.75 - 150 - 5 = 1638.75 kcal
+- BMR (Mifflin-St Jeor for female): 10 × 70 + 6.25 × 175 - 5 × 30 - 161 = 700 + 1093.75 - 150 - 161 = 1482.75 kcal
+- For marathon training, activity multiplier is high: 1.7-2.0+
+- Let's say TDEE: approximately 1638 × 1.8 ≈ 2950 kcal (male) or 1483 × 1.8 ≈ 2670 kcal (female)
+- For marathon performance optimization, they'd need higher carbs. Let's target around 3000-3500 kcal for a male, or ~2800 for a female. Since gender isn't specified, I'll aim for approximately 3,200 kcal which is a solid target for a 70kg marathoner in training.
+
+Actually, let me target around 3,000-3,200 kcal. Let me go with ~3,200 kcal.
+
+Macronutrient split for marathon performance:
+- Carbs: 60-70% (for endurance) → ~550-560g carbs
+- Protein: 15-20% → ~120-160g protein
+- Fat: 20-30% → ~70-100g fat
+
+Let me aim for:
+- Calories: ~3,200 kcal
+- Carbs: ~560g (70%)
+- Protein: ~130g (16%)
+- Fat: ~75g (14%)
+
+Wait, let me recalculate:
+- 560g carbs × 4 = 2240 kcal
+- 130g protein × 4 = 520 kcal
+- 75g fat × 9 = 675 kcal
+- Total: 3435 kcal
+
+Let me adjust:
+- Carbs: 530g → 2120 kcal
+- Protein: 130g → 520 kcal
+- Fat: 80g → 720 kcal
+- Total: 3360 kcal
+
+Let me aim for ~3,200 kcal:
+- Carbs: 500g → 2000 kcal
+- Protein: 125g → 500 kcal
+- Fat: 80g → 720 kcal
+- Total: 3220 kcal ≈ 3,200 kcal
+
+That works well. Let me plan meals around this.
+
+Lactose intolerant: Avoid milk, cheese, butter, cream, ice cream. Can use:
+- Lactose-free milk (but let me use alternatives for simplicity)
+- Oat milk, soy milk, almond milk
+- Tofu
+- Eggs
+- Chicken, fish, lean beef
+- Rice, oats, bread, pasta
+- Fruits, vegetables
+- Nuts, seeds
+- Olive oil</pre></td>
+                <td class="score-col"><span class="score score-low">1</span></td>
+                <td class="reasoning">The solution is incomplete because it stops at the planning and calculation phase without generating the actual meal plan. It fails to meet the primary mandatory requirement of providing a single-day meal plan with specific food items. Additionally, it violates the conciseness criterion by including verbose internal monologue and calculations rather than a direct, compact output.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a gluten-free powerlifter requiring specific macro ratios for bulking phase, emphasizing compact presentation</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 95<br><strong>goal:</strong> Bulking (Powerlifting)<br><strong>restrictions:</strong> Gluten-free</td>
+                <td class="criteria">• Provides a 1-day meal plan with compact presentation<br>• All foods are strictly gluten-free<br>• Includes specific macro targets or high-calorie density suitable for bulking</td>
+                <td class="output"><pre>The user wants a one-day meal plan for a powerlifter who is bulking. Let me work through this carefully.
+
+Athlete info:
+- Height: 180 cm
+- Weight: 95 kg
+- Goal: Bulking (Powerlifting)
+- Dietary restriction: Gluten-free
+
+For a powerlifter bulking at 95 kg, I need to calculate appropriate calorie needs.
+
+BMR calculation (Mifflin-St Jeor for males, assuming male given powerlifting context):
+BMR = 10 × 95 + 6.25 × 180 - 5 × 30 - 5 (assuming age ~30)
+= 950 + 1125 - 150 - 5
+= 1920 kcal
+
+For a powerlifter training 4-5 days/week with moderate to high intensity, activity multiplier ~1.7-1.9
+TDEE = 1920 × 1.8 ≈ 3456 kcal
+
+For bulking, add a surplus of ~300-500 kcal above maintenance:
+Target: ~3800-4000 kcal
+
+Let me go with approximately 4000 kcal for a solid bulking target.
+
+Macronutrient split for powerlifting bulking:
+- Protein: ~1.6-2.2 g/kg = ~150-210g (let's say ~180g = 720 kcal)
+- Fat: ~25-30% of calories = ~275-330 kcal... let me recalculate
+- Carbs: remaining
+
+Let me set:
+- Protein: 200g = 800 kcal (20%)
+- Fat: 130g = 1170 kcal (29%)
+- Carbs: 430g = 1720 kcal (43%)
+- Total: ~3690 kcal
+
+Hmm, let me adjust to hit closer to 4000:
+- Protein: 200g = 800 kcal (20%)
+- Fat: 140g = 1260 kcal (32%)
+- Carbs: 470g = 1880 kcal (47%)
+- Total: ~3940 kcal
+
+Let me round to:
+- Calories: ~4000 kcal
+- Protein: 200g (800 kcal)
+- Fat: 140g (1260 kcal)
+- Carbs: 480g (1920 kcal)
+Total: 3980 kcal ≈ 4000 kcal
+
+Now let me plan meals. All gluten-free. I need to be careful:
+- No wheat, barley, rye
+- Oats must be certified gluten-free
+- Rice, potatoes, quinoa, corn are safe
+- Natural meats, fish, eggs are safe
+- Avocado, nuts (check labels) are safe
+- No breadcrumbs, no bread (unless GF bread)
+- Soy sauce should be tamari (GF)
+
+Meal plan (5-6 meals for an athlete):
+
+Meal 1 - Breakfast (7:00 AM): ~700 kcal
+- Oatmeal (GF certified) 100g = 389 kcal, 69g carbs, 13g protein, 7g fat
+- Whole eggs 3 (150g) = 234 kcal, 21g protein, 15g fat, 1g carb
+- Bananas 1 (120g) = 107 kcal, 27g carbs, 1g protein, 0g fat
+- Honey 20g = 62 kcal, 17g carbs
+- Total: ~792 kcal, 35g protein, 23g fat, 114g carbs
+
+Meal 2 - Lunch (11:30 AM): ~800 kcal
+- Chicken breast (raw weight) 200g = 330 kcal, 62g protein, 7g fat, 0g carbs
+- White rice (dry) 150g = 544 kcal, 118g carbs, 11g protein, 1g fat
+- Olive oil 15g = 135 kcal, 15g fat
+- Vegetables (broccoli)</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">The solution fails the mandatory requirement of providing a complete 1-day meal plan as it is truncated after the second meal. Additionally, it violates the 'compact, concise' presentation criterion by including detailed calculation logs and internal reasoning instead of just the final output. While the nutritional logic and gluten-free compliance are correct, the incomplete and verbose nature of the response makes it unusable as requested.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a vegan cyclist on a strict budget, verifying feasibility and conciseness of the 1-day plan</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 70<br><strong>goal:</strong> Endurance cycling performance<br><strong>restrictions:</strong> Vegan, strict budget</td>
+                <td class="criteria">• Provides a complete 1-day meal plan (breakfast, lunch, dinner, snacks)<br>• All ingredients are vegan and low-cost (e.g., oats, beans, rice, seasonal vegetables)<br>• Plan is concise and fits within a compact format (no unnecessary fluff or lengthy explanations)<br>• Meals are feasible for a cyclist's energy needs without requiring expensive supplements</td>
+                <td class="output"><pre>The user wants a one-day meal plan for an endurance cyclist with specific attributes:
+- Height: 175 cm
+- Weight: 70 kg
+- Goal: Endurance cycling performance
+- Dietary restrictions: Vegan, strict budget
+
+Let me calculate the daily calorie needs:
+- BMR (Basal Metabolic Rate) using Mifflin-St Jeor equation:
+  - For a person (gender not specified, I'll assume male based on context, but let me use a general calculation):
+  - BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age - 5 (male) or +161 (female)
+  - Let's assume male, age ~25: BMR = 10(70) + 6.25(175) - 5(25) - 5 = 700 + 1093.75 - 125 - 5 = 1663.75 kcal
+  - Let's assume female, age ~25: BMR = 700 + 1093.75 - 125 + 161 = 2829.75... wait that doesn't seem right.
+  - Actually: BMR (female) = 10(70) + 6.25(175) - 5(25) - 161 = 700 + 1093.75 - 125 - 161 = 1507.75 kcal
+
+Let me just use a general BMR around 1,600-1,700 kcal for a 70kg, 175cm person.
+
+- TDEE (Total Daily Energy Expenditure) for an endurance cyclist:
+  - An endurance cyclist typically trains 2-4+ hours per day
+  - Activity multiplier: 1.7-1.9 (very active)
+  - TDEE = ~1,650 × 1.8 = ~2,970 kcal
+  - For endurance cycling performance (high volume training), they'd need more fuel
+  - Endurance athletes typically need 4,000-6,000+ kcal depending on training volume
+  - Let's estimate a moderate-to-high training day: about 3,500-4,500 kcal
+  - I'll go with approximately 3,800 kcal as a reasonable estimate for a 70kg endurance cyclist on a training day (not a competition day, but a solid training day)
+
+Actually, let me reconsider. For a 70kg person doing endurance cycling:
+- BMR ~1,650 kcal
+- Training: 3 hours of moderate cycling burns ~600-900 kcal
+- Total: ~2,800-3,500 kcal on a normal training day
+- For performance-focused training: 3,500-4,000 kcal
+
+I'll target approximately 3,800 kcal to support endurance performance.
+
+Macronutrient distribution for endurance cycling:
+- Carbs: 65-70% (primary fuel for endurance)
+- Protein: 15-20% (recovery)
+- Fat: 15-20% (sustained energy)
+
+At 3,800 kcal:
+- Carbs: 70% = 2,660 kcal = 665g
+- Protein: 18% = 684 kcal = 171g
+- Fat: 12% = 456 kcal = 51g
+
+Wait, let me recalculate to be more realistic for a vegan diet:
+- Carbs: 65% = 2,470 kcal = 617g
+- Protein: 20% = 760 kcal = 190g
+- Fat: 15% = 570 kcal = 63g
+
+Total: 617 + 190 + 63 = 870g of macros, 3,800 kcal. That works.
+
+Let me adjust slightly:
+- Carbs: 65% = ~620g
+- Protein: 20% = ~190g
+- Fat: 15% = ~63g
+- Total: ~3,800 kcal
+
+Now</pre></td>
+                <td class="score-col"><span class="score score-low">1</span></td>
+                <td class="reasoning">The solution completely fails the primary task of providing a meal plan. It only outputs the AI's internal thought process regarding calorie calculations and macronutrient distribution. It does not list any specific foods, meals, or ingredients, thus failing all mandatory criteria related to content and format.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
